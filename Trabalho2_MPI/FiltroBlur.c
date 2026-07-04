@@ -446,7 +446,7 @@ ResultadosFiltro filtroParalelo(PGM *pgm, int tamanho_filtro, int np, int visao_
             fflush(stdout);
         }
 
-        for(j=0;j<qtd_linhas_original;j++){
+            for(j=0;j<qtd_linhas_original;j++){
             MPI_Send(pgm->data[j], qtd_colunas_original, MPI_UNSIGNED_CHAR, i, tag, MPI_COMM_WORLD);
         }
 
@@ -690,6 +690,8 @@ int main(int argc, char *argv[])
     MPI_Comm_size(MPI_COMM_WORLD, &np);
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
 
+    arquivo_saida = fopen("log_saida.txt", "w");
+    fclose(arquivo_saida);
 
     pgm = malloc(sizeof(PGM));
 
@@ -745,7 +747,7 @@ int main(int argc, char *argv[])
                 visaoDetalhada = 0;
             }
 
-            // Roda a execução paralela
+            // Executa a suavização paralela
             paralelo = filtroParalelo(pgm, janelaFiltro, np, visaoDetalhada);
 
             printf("\n\nGerente: Fim da filtragem paralela.\n");
@@ -756,7 +758,7 @@ int main(int argc, char *argv[])
 
             MPI_Barrier(MPI_COMM_WORLD);
 
-            // Roda a execução sequencial
+            // Executa a suavização sequencial
             sequencial.Average = filtroSequencialAverage(pgm, janelaFiltro);
             saveImage(sequencial.Average, "FiltroSequencialAverage.pgm");
 
@@ -774,13 +776,12 @@ int main(int argc, char *argv[])
             comparaMatriz(paralelo.Median, sequencial.Median);
 
 
-            arquivo_saida = fopen("log.txt", "a");
+            arquivo_saida = fopen("log_saida.txt", "a");
 
             if (arquivo_saida == NULL) {
                 printf("Erro ao abrir o arquivo.\n");
                 return 1;
             }
-
 
             fprintf(arquivo_saida, "\nExecucao %d:", loop);
             fprintf(arquivo_saida, "\nTempo de execucao Filtro Sequencial Average: %f", sequencial.Average->time);
