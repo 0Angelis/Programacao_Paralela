@@ -1,0 +1,82 @@
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial: 0.102000
+Tempo de execucao Filtro Paralelo: 0.031000
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial: 0.107000
+Tempo de execucao Filtro Paralelo: 0.064000
+
+Execucao 1:
+Tempo de execucao Filtro Sequencial: 0.096000
+Tempo de execucao Filtro Paralelo: 0.048000
+
+Execucao 2:
+Tempo de execucao Filtro Sequencial: 0.101000
+Tempo de execucao Filtro Paralelo: 0.061000
+
+Execucao 3:
+Tempo de execucao Filtro Sequencial: 0.099000
+Tempo de execucao Filtro Paralelo: 0.043000
+
+Execucao 4:
+Tempo de execucao Filtro Sequencial: 0.111000
+Tempo de execucao Filtro Paralelo: 0.048000
+
+Execucao 5:
+Tempo de execucao Filtro Sequencial: 0.119000
+Tempo de execucao Filtro Paralelo: 0.064000
+
+Execucao 6:
+Tempo de execucao Filtro Sequencial: 0.097000
+Tempo de execucao Filtro Paralelo: 0.063000
+
+Execucao 7:
+Tempo de execucao Filtro Sequencial: 0.095000
+Tempo de execucao Filtro Paralelo: 0.040000
+
+Execucao 8:
+Tempo de execucao Filtro Sequencial: 0.096000
+Tempo de execucao Filtro Paralelo: 0.030000
+
+Execucao 9:
+Tempo de execucao Filtro Sequencial: 0.096000
+Tempo de execucao Filtro Paralelo: 0.047000
+
+Execucao 10:
+Tempo de execucao Filtro Sequencial: 0.107000
+Tempo de execucao Filtro Paralelo: 0.034000
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial: 0.105000
+Tempo de execucao Filtro Paralelo: 0.032000
+
+Execucao 1:
+Tempo de execucao Filtro Sequencial: 0.095000
+Tempo de execucao Filtro Paralelo: 0.033000
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial: 1.543000
+Tempo de execucao Filtro Paralelo: 0.506000
+
+Execucao 1:
+Tempo de execucao Filtro Sequencial: 1.440000
+Tempo de execucao Filtro Paralelo: 0.492000
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial Average: 0.113000
+Tempo de execucao Filtro Sequencial Median: 1.435000
+Tempo de execucao Filtro Paralelo Average: 0.494000
+Tempo de execucao Filtro Paralelo Median: 0.494000
+
+Execucao 0:
+Tempo de execucao Filtro Sequencial Average: 0.098000
+Tempo de execucao Filtro Sequencial Median: 1.591000
+Tempo de execucao Filtro Paralelo Average: 0.032000
+Tempo de execucao Filtro Paralelo Median: 0.497000
+
+Execucao 1:
+Tempo de execucao Filtro Sequencial Average: 0.136000
+Tempo de execucao Filtro Sequencial Median: 2.102000
+Tempo de execucao Filtro Paralelo Average: 0.046000
+Tempo de execucao Filtro Paralelo Median: 0.730000
