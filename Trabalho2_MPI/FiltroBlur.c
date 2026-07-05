@@ -1,3 +1,8 @@
+//==============================================
+//			LINK DA APRESENTA√á√ÉO
+//https://www.youtube.com/watch?v=fHveTImfgE4
+//=============================================
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -119,19 +124,19 @@ int nomeArquivoValido(const char *nome) {
 
     len = strlen(nome);
 
-    // Tamanho mÌnimo: "a.pgm"
+    // Tamanho m√≠nimo: "a.pgm"
     if (len < 5)
         return 0;
 
-    // Verifica extens„o ".pgm"
+    // Verifica extens√£o ".pgm"
     if (strcmp(nome + len - 4, ".pgm") != 0)
         return 0;
 
-    // O nome n„o pode terminar com espaÁo ou ponto
+    // O nome n√£o pode terminar com espa√ßo ou ponto
     if (nome[len - 5] == ' ' || nome[len - 5] == '.')
         return 0;
 
-    // Verifica caracteres inv·lidos
+    // Verifica caracteres inv√°lidos
     for (i = 0; i < len - 4; i++) {
         unsigned char c = nome[i];
 
@@ -382,11 +387,11 @@ ResultadosFiltro filtroParalelo(PGM *pgm, int tamanho_filtro, int np, int visao_
 
   inicializa_PGM(pgmParaleloMedian);
 
-  // Define a parte inteira e os restos da divis„o de trabalho das threads
+  // Define a parte inteira e os restos da divis√£o de trabalho das threads
   n_int = pgm->height/np;
   n_resto = pgm->height % np;
 
-  // Aux_inicio determina o inÌcio do intervalo de c·lculo de uma thread
+  // Aux_inicio determina o in√≠cio do intervalo de c√°lculo de uma thread
     inicio=0;
     fim=0;
     if (n_resto > 0){
@@ -747,7 +752,7 @@ int main(int argc, char *argv[])
                 visaoDetalhada = 0;
             }
 
-            // Executa a suavizaÁ„o paralela
+            // Executa a suaviza√ß√£o paralela
             paralelo = filtroParalelo(pgm, janelaFiltro, np, visaoDetalhada);
 
             printf("\n\nGerente: Fim da filtragem paralela.\n");
@@ -758,7 +763,7 @@ int main(int argc, char *argv[])
 
             MPI_Barrier(MPI_COMM_WORLD);
 
-            // Executa a suavizaÁ„o sequencial
+            // Executa a suaviza√ß√£o sequencial
             sequencial.Average = filtroSequencialAverage(pgm, janelaFiltro);
             saveImage(sequencial.Average, "FiltroSequencialAverage.pgm");
 
@@ -864,7 +869,7 @@ int main(int argc, char *argv[])
                     MPI_Recv(pgm->data[i], qtd_colunas_original, MPI_UNSIGNED_CHAR, 0, tag, MPI_COMM_WORLD, &st);
                 }
 
-                // Realiza a paralelizaÁ„o com o filtro de mÈdia
+                // Realiza a paraleliza√ß√£o com o filtro de m√©dia
                 filtroMPIAverage(inicio, fim, janelaFiltro, id, visaoDetalhada);
 
                 MPI_Send(&inicio, 1, MPI_INT, 0, tag, MPI_COMM_WORLD);
@@ -877,7 +882,7 @@ int main(int argc, char *argv[])
 
                 MPI_Barrier(MPI_COMM_WORLD);
 
-                // Realiza a paralelizaÁ„o com o filtro de mediana
+                // Realiza a paraleliza√ß√£o com o filtro de mediana
                 filtroMPIMedian(inicio, fim, janelaFiltro, id, visaoDetalhada);
 
                 MPI_Send(&inicio, 1, MPI_INT, 0, tag, MPI_COMM_WORLD);
