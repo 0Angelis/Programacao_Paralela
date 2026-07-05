@@ -1,7 +1,7 @@
-//==============================================
-//			LINK DA APRESENTAÇÃO
-//https://www.youtube.com/watch?v=fHveTImfgE4
-//=============================================
+//================================================
+//			  LINK DA APRESENTAÇÃO
+//		  https://youtu.be/fHveTImfgE4
+//================================================
 
 #include <ctype.h>
 #include <stdio.h>
